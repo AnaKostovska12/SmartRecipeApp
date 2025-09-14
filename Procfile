@@ -1,1 +1,1 @@
-web: gunicorn smart_recipe_project.wsgi:application
+web: gunicorn smart_recipe.wsgi:application
