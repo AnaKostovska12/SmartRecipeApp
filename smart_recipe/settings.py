@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s#6c&3(ywkcz&ych0=j462s=-f@_y_f==4m)mw!uiqct!o17mv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+# DEBUG = True
+DEBUG = False 
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".onrender.com"]
 ALLOWED_HOSTS = [
@@ -137,3 +137,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
