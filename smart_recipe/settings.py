@@ -25,10 +25,18 @@ SECRET_KEY = 'django-insecure-s#6c&3(ywkcz&ych0=j462s=-f@_y_f==4m)mw!uiqct!o17mv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".onrender.com"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "smartrecipeapp-1.onrender.com"
+]
 
 
 # Application definition
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -117,7 +125,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
+STATICFILES_DIRS = [
+    BASE_DIR / "recipes" / "static_recipes",
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
